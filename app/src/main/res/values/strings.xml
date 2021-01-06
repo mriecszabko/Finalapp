@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Binarynator</string>
+    <string-array name="systemFrom">
+        <item>Desiatková</item>
+        <item>Binárna</item>
+        <item>Osmičková</item>
+        <item>Šestnástková</item>
+    </string-array>
+</resources>

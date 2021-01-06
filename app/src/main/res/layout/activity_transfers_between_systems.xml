@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/RL_MainLayout"
+    android:layout_height="match_parent"
+    tools:context=".TransfersBetweenSystems"
+    android:orientation="horizontal"
+    android:background="@color/orangeBG"
+    >
+
+    <TextView
+        android:id="@+id/TV_TransferFrom"
+        android:text="Prevod z"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/SP_transferTo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        ></TextView>
+
+    <Spinner
+        android:id="@+id/SP_transferFrom"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:entries="@array/systemFrom"
+        android:layout_below="@+id/TV_TransferFrom"
+        android:layout_marginTop="10dp"
+        ></Spinner>
+    <TextView
+        android:text="Prevod do"
+        android:id="@+id/TV_TransferTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/SP_transferTo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/SP_transferFrom"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <Spinner
+        android:id="@+id/SP_transferTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/systemFrom"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/TV_TransferTo"
+        android:layout_marginTop="10dp"
+        ></Spinner>
+    <Button
+        android:id="@+id/BT_GenerateExample"
+        android:text="Generovať príklad"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SP_transferTo"
+        android:layout_marginTop="20dp"
+        android:background="@color/orangeBT"
+        android:padding="5dp"
+        >
+    </Button>
+    <RelativeLayout
+        android:id="@+id/RL_SecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BT_GenerateExample"
+        tools:ignore="NotSibling"
+        android:layout_marginTop="20dp"
+        >
+    <TextView
+        android:id="@+id/TV_Example"
+        android:text="Príklad:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/TV_ExampleRand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/TV_Example"
+        android:layout_alignLeft="@+id/ET_Result"
+        android:layout_marginTop="60dp"
+
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/TV_Result"
+        android:text="Výsledok:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:layout_below="@+id/TV_Example"
+        android:layout_alignLeft="@+id/TV_Example"
+        android:layout_marginTop="20dp"
+
+        >
+    </TextView>
+    <EditText
+        android:id="@+id/ET_Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="textStart"
+        android:layout_toRightOf="@id/TV_Result"
+        android:layout_below="@+id/TV_ExampleRand"
+        android:hint="Výsledok"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        >
+    </EditText>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/TV_ResultWarnning"
+        android:text="Tvoja odpoveď je nesprávna skús to ešte raz"
+        android:textColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_below="@+id/RL_SecondLayout"
+        android:layout_marginTop="20dp"
+        >
+    </TextView>
+    <Button
+        android:id="@+id/BT_ConfrimResult"
+        android:text="Overiť výsledok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/orangeBT"
+        android:layout_alignLeft="@+id/BT_CorrectResult"
+        android:layout_alignRight="@+id/BT_CorrectResult"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/TV_ResultWarnning"
+        >
+
+    </Button>
+    <Button
+        android:id="@+id/BT_CorrectResult"
+        android:text="Zobraz správny výsledok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/orangeBT"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:layout_below="@id/BT_ConfrimResult"
+        >
+
+    </Button>
+
+
+
+</RelativeLayout>
