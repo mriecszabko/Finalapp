@@ -33,10 +33,10 @@ private Boolean result;
             public void onClick(View v) {
                 fristSpinner= spinnerFrom.getSelectedItem().toString();
                 secondSpinner = spinnerTo.getSelectedItem().toString();
-                resultWarnning.setText("");
+                resultWarnning.setText(R.string.Space);
                 returnedRandomExample = transferLogic.generateExmaple(fristSpinner);
                 randomExample.setText(returnedRandomExample);
-                correctResultTV.setText(" ");
+                correctResultTV.setText(R.string.Space);
             }
         });
         confirmResult.setOnClickListener(new View.OnClickListener() {
@@ -47,11 +47,11 @@ private Boolean result;
 
                    result = transferLogic.checkResult(fristSpinner,secondSpinner,ETgetText.getText().toString(),randomExample.getText().toString());
                    if(result == true){
-                       resultWarnning.setText("Je to dobre");
+                       resultWarnning.setText(R.string.CorrectResult);
 
                    }
                    else{
-                       resultWarnning.setText("Tvoja odpoveď je nesprávna skús to ešte raz");
+                       resultWarnning.setText(R.string.WarrningResult);
 
                    }
 

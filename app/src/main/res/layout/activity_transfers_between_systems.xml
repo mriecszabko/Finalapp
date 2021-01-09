@@ -12,7 +12,7 @@
 
     <TextView
         android:id="@+id/TV_TransferFrom"
-        android:text="Prevod z"
+        android:text= "@string/TransferFrom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/SP_transferTo"
@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         ></Spinner>
     <TextView
-        android:text="Prevod do"
+        android:text="@string/TransferTo"
         android:id="@+id/TV_TransferTo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         ></Spinner>
     <Button
         android:id="@+id/BT_GenerateExample"
-        android:text="Generovať príklad"
+        android:text="@string/GenerateExample"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
         >
     <TextView
         android:id="@+id/TV_Example"
-        android:text="Príklad:"
+        android:text="@string/Example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
@@ -98,7 +98,7 @@
     </TextView>
     <TextView
         android:id="@+id/TV_Result"
-        android:text="Výsledok:"
+        android:text="@string/Result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
@@ -118,7 +118,7 @@
         android:textAlignment="textStart"
         android:layout_toRightOf="@id/TV_Result"
         android:layout_below="@+id/TV_ExampleRand"
-        android:hint="Výsledok"
+        android:hint="@string/Result"
         android:maxLength="8"
         android:textColor="@color/black"
         android:layout_marginLeft="20dp"
@@ -140,7 +140,7 @@
     </TextView>
     <Button
         android:id="@+id/BT_ConfrimResult"
-        android:text="Overiť výsledok"
+        android:text="@string/VerifyResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -155,7 +155,7 @@
     </Button>
     <Button
         android:id="@+id/BT_CorrectResult"
-        android:text="Zobraz správny výsledok"
+        android:text="@string/DispplayTheCorrectResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
