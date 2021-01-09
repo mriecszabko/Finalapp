@@ -10,4 +10,5 @@
     <color name="orangeBG">#fac961</color>
     <color name="orangeBT">#fc9700</color>
     <color name="red">#fc0000</color>
+    <color name = "green">#7CFC00</color>
 </resources>
