@@ -48,10 +48,12 @@ private Boolean result;
                    result = transferLogic.checkResult(fristSpinner,secondSpinner,ETgetText.getText().toString(),randomExample.getText().toString());
                    if(result == true){
                        resultWarnning.setText(R.string.CorrectResult);
+                       resultWarnning.setTextColor(Color.GREEN);
 
                    }
                    else{
                        resultWarnning.setText(R.string.WarrningResult);
+                       resultWarnning.setTextColor(Color.RED);
 
                    }
 
