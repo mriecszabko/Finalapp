@@ -32,19 +32,18 @@ private Boolean result;
         generateExample.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fristSpinner= spinnerFrom.getSelectedItem().toString();
-                secondSpinner = spinnerTo.getSelectedItem().toString();
-                resultWarnning.setText(R.string.Space);
+                fristSpinner= String.valueOf(spinnerFrom.getSelectedItemId());
                 returnedRandomExample = transferLogic.generateExmaple(fristSpinner);
                 randomExample.setText(returnedRandomExample);
                 correctResultTV.setText(R.string.Space);
+                resultWarnning.setText(R.string.Space);
             }
         });
         confirmResult.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    fristSpinner = spinnerFrom.getSelectedItem().toString();
-                    secondSpinner = spinnerTo.getSelectedItem().toString();
+                    fristSpinner= String.valueOf(spinnerFrom.getSelectedItemId());
+                    secondSpinner = String.valueOf(spinnerTo.getSelectedItemId());
                     //TODO on slectedItemid retuned int value 0-3 rework switch
                     Log.d("hello", String.valueOf(spinnerFrom.getSelectedItemId()));
 
@@ -66,8 +65,8 @@ private Boolean result;
         correctResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fristSpinner = spinnerFrom.getSelectedItem().toString();
-                secondSpinner = spinnerTo.getSelectedItem().toString();
+                fristSpinner= String.valueOf(spinnerFrom.getSelectedItemId());
+                secondSpinner = String.valueOf(spinnerTo.getSelectedItemId());
                 correctResultTV.setText( transferLogic.returnCorrectResult(fristSpinner,secondSpinner,randomExample.getText().toString()));
 
             }

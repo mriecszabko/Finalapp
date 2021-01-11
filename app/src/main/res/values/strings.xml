@@ -8,14 +8,15 @@
     </string-array>
     <string name="TransferFrom"> Prevod z</string>
     <string name="TransferTo"> Prevod do</string>
-    <string name="GenerateExample">Generovať príklad</string>
     <string name="Example">Príklad</string>
     <string name="Result">Výsledok</string>
-    <string name="VerifyResult">Overiť Výsledok</string>
-    <string name="DispplayTheCorrectResult">Zobraz správny výsledok</string>
     <string name="Space"> </string>
     <string name="CorrectResult"> Výsledok je správny</string>
     <string name="WarrningResult">Tvoja odpoveď je nesprávna skús to ešte raz</string>
     <string name="appname">Binarynator</string>
 
+    //Button Strings
+    <string name="GenerateExample">Generovať príklad</string>
+    <string name="VerifyResult">Overiť Výsledok</string>
+    <string name="DispplayTheCorrectResult">Zobraz správny výsledok</string>
 </resources>

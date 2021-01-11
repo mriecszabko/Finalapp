@@ -5,32 +5,31 @@ import java.util.Random;
 public  class transferLogic {
 
         static String generateExmaple(String transferFrom){
-                String hello = "hello";
                 int decimal;
 
                 Random rand = new Random();
 
-                if(transferFrom.equals("Desiatková") || transferFrom.equals("Decimal")){
+                if(transferFrom.equals("0")){
                         decimal = rand.nextInt(255);
 
                         return Integer.toString(decimal);
                 }
-                else if(transferFrom.equals("Binárna") || transferFrom.equals("Binnary")){
+                else if(transferFrom.equals("1")){
                         decimal = rand.nextInt(255);
                         return String.format("%8s",
                                 Integer.toBinaryString(0xFF & decimal)).replaceAll(" ", "0");
                 }
-                else if(transferFrom.equals("Osmičková") || transferFrom.equals("Octal")){
+                else if(transferFrom.equals("2")){
                         decimal = rand.nextInt(255);
                         return Integer.toString(decimal,8);
                 }
-                else if(transferFrom.equals("Šestnástková") || transferFrom.equals("Hexidecimal")){
+                else if(transferFrom.equals("3")){
                         decimal = rand.nextInt(255);
                         return Integer.toString(decimal,16);
                 }
                 else{
-                        hello = "nic";
-                        return hello;
+
+                        return " ";
                 }
 
         }
@@ -39,16 +38,16 @@ public  class transferLogic {
         static boolean checkResult(String transferFrom, String transferTo,String inputText,String randomExample){
                 switch (transferFrom){
                         //Frist CASE FROM to Second case = RESULT
-                        case "Desiatková":
+                        case "0":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(inputText.matches("[0-9]+") && inputText.equals(randomExample) ){
                                                         return true;
                                                 }
                                                 else{
                                                         return  false;
                                                 }
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -61,7 +60,7 @@ public  class transferLogic {
                                                         }
 
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -73,7 +72,7 @@ public  class transferLogic {
                                                 }
 
 
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -87,9 +86,9 @@ public  class transferLogic {
                                 }
                                 break;
                                 //Z binarnej do desitkovej
-                        case  "Binárna":
+                        case  "1":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -107,7 +106,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -126,7 +125,7 @@ public  class transferLogic {
 
 
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -144,7 +143,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -164,9 +163,9 @@ public  class transferLogic {
                                 }
                                 break;
 
-                        case  "Osmičková":
+                        case  "2":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -184,7 +183,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -203,7 +202,7 @@ public  class transferLogic {
 
 
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -221,7 +220,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -240,9 +239,9 @@ public  class transferLogic {
                                 }
                                 break;
 
-                        case "Šestnástková":
+                        case "3":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -260,7 +259,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -279,7 +278,7 @@ public  class transferLogic {
 
 
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -297,7 +296,7 @@ public  class transferLogic {
                                                         return  false;
                                                 }
 
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty() || inputText.isEmpty()){
                                                         return false;
                                                 }
@@ -326,16 +325,16 @@ public  class transferLogic {
 
                 String correctResult = null;
                 switch(transferFrom){
-                        case "Desiatková":
+                        case "0":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return randomExample;
                                                 }
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty()) {
                                                         return correctResult;
 
@@ -344,7 +343,7 @@ public  class transferLogic {
                                                         return String.format("%8s", Integer.toBinaryString(0xFF & Integer.parseInt(randomExample))).replaceAll(" ", "0");
                                                 }
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
@@ -352,7 +351,7 @@ public  class transferLogic {
 
                                                         return Integer.toOctalString(Integer.parseInt(randomExample));
                                                 }
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
@@ -361,16 +360,16 @@ public  class transferLogic {
                                                 }
                                 }
                                 //TODO
-                        case  "Binárna":
+                        case  "1":
                                 switch (transferTo) {
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return String.valueOf(Integer.parseInt(randomExample, 2));
                                                 }
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty()) {
                                                         return correctResult;
 
@@ -379,14 +378,14 @@ public  class transferLogic {
                                                         return randomExample;
                                                 }
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return String.valueOf(  Integer.toOctalString(Integer.parseInt(randomExample,2)));
                                                 }
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
@@ -396,16 +395,16 @@ public  class transferLogic {
                                                 }
 
                                 }
-                        case  "Osmičková":
+                        case  "2":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return String.valueOf(Integer.parseInt(randomExample, 8));
                                                 }
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty()) {
                                                         return correctResult;
 
@@ -414,14 +413,14 @@ public  class transferLogic {
                                                         return String.format("%8s", Integer.toBinaryString(0xFF & Integer.parseInt(randomExample,8))).replaceAll(" ", "0");
                                                 }
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return randomExample;
                                                 }
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
@@ -431,16 +430,16 @@ public  class transferLogic {
                                                 }
 
                                 }
-                        case  "Šestnástková":
+                        case  "3":
                                 switch (transferTo){
-                                        case "Desiatková":
+                                        case "0":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return String.valueOf(Integer.parseInt(randomExample, 16));
                                                 }
-                                        case  "Binárna":
+                                        case  "1":
                                                 if(randomExample.isEmpty()) {
                                                         return correctResult;
 
@@ -449,14 +448,14 @@ public  class transferLogic {
                                                         return String.format("%8s", Integer.toBinaryString(0xFF & Integer.parseInt(randomExample,16))).replaceAll(" ", "0");
                                                 }
 
-                                        case  "Osmičková":
+                                        case  "2":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }
                                                 else {
                                                         return Integer.toOctalString(Integer.parseInt(randomExample, 16));
                                                 }
-                                        case "Šestnástková":
+                                        case "3":
                                                 if(randomExample.isEmpty()){
                                                         return correctResult;
                                                 }

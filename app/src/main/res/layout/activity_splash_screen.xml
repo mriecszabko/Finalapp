@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,22 +7,26 @@
     tools:context=".SplashScreen"
     android:background="@color/orangeBG"
     android:orientation="vertical">
+
+
     <TextView
-        android:text="Binarynator"
+        android:text="@string/app_name"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_above="@+id/LT_animation"
         android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="100dp"
+        android:textSize="40sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></TextView>
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/LT_animation"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         app:lottie_speed="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/splashbinarinatory"
         ></com.airbnb.lottie.LottieAnimationView>
 
-</LinearLayout>
+</RelativeLayout>
