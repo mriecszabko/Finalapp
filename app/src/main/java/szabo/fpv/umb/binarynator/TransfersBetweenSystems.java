@@ -3,6 +3,7 @@ package szabo.fpv.umb.binarynator;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +45,8 @@ private Boolean result;
                 public void onClick(View v) {
                     fristSpinner = spinnerFrom.getSelectedItem().toString();
                     secondSpinner = spinnerTo.getSelectedItem().toString();
+                    //TODO on slectedItemid retuned int value 0-3 rework switch
+                    Log.d("hello", String.valueOf(spinnerFrom.getSelectedItemId()));
 
                    result = transferLogic.checkResult(fristSpinner,secondSpinner,ETgetText.getText().toString(),randomExample.getText().toString());
                    if(result == true){

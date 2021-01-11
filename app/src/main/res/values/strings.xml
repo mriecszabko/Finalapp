@@ -15,8 +15,7 @@
     <string name="DispplayTheCorrectResult">Zobraz správny výsledok</string>
     <string name="Space"> </string>
     <string name="CorrectResult"> Výsledok je správny</string>
-    <string name ="WarrningResult">Tvoja odpoveď je nesprávna skús to ešte raz</string>
-
-
+    <string name="WarrningResult">Tvoja odpoveď je nesprávna skús to ešte raz</string>
+    <string name="appname">Binarynator</string>
 
 </resources>
